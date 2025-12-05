@@ -1,0 +1,35 @@
+{
+    "name": "sokumar2/cache",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "SK\\Cache\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Soumya Kumar",
+            "email": "sokumar2@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1.0",
+        "sokumar2/collections": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.4"
+    },
+    "scripts": {
+        "test": [
+            "./vendor/bin/phpunit tests"
+        ],
+        "coverage": [
+            "XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-clover tests/report/clover.xml tests"
+        ]
+    }
+}
