@@ -6,10 +6,19 @@ An LRU (Least Recently Used) and MRU (Most Recently Used) cache implementations 
 
 ## Usage
 ```php
-$cacheFactory = new CacheFactory()->createInstance(3);
+$cache = new CacheFactory()->createInstance(3);
 $cache->put('key', '<value>');
 
 $cache->get('key');
+```
+
+### MRU
+```php
+use SK\Cache\Type as CacheType;
+
+...
+$cache = new CacheFactory()->createInstance(3, CacheType::MRU);
+...
 ```
 
 ## Tests
