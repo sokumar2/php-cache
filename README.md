@@ -5,6 +5,7 @@
 An LRU (Least Recently Used) and MRU (Most Recently Used) cache implementations in PHP.
 
 ## Usage
+### LRU
 ```php
 $cache = new CacheFactory()->createInstance(3);
 $cache->put('key', '<value>');
