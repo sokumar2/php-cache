@@ -2,7 +2,7 @@
 
 namespace SK\Cache;
 
-class LRUCache extends AbstractCache
+class MRUCache extends AbstractCache
 {
     public function put(string $key, mixed $value): void
     {
@@ -11,7 +11,7 @@ class LRUCache extends AbstractCache
 
             $this->size--;
         } elseif ($this->size === $this->capacity) {
-            $composite = $this->linkedList->removeLast();
+            $composite = $this->linkedList->removeFirst();
 
             unset($this->cache[$composite->key]);
             $this->size--;

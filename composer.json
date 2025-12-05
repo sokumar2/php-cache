@@ -27,9 +27,6 @@
     "scripts": {
         "test": [
             "./vendor/bin/phpunit tests"
-        ],
-        "coverage": [
-            "XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-clover tests/report/clover.xml tests"
         ]
     }
 }
