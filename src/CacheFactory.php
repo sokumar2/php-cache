@@ -2,15 +2,16 @@
 
 namespace SK\Cache;
 
+use SK\Cache\Type as CacheType;
 use SK\Cache\Interface\CacheInterface;
 
 class CacheFactory extends AbstractCacheFactory
 {
-    public function createInstance(int $capacity, Type $type = Type::LRU): ?CacheInterface
+    public function createInstance(int $capacity, CacheType $type = CacheType::LRU): ?CacheInterface
     {
-        if (Type::LRU === $type) {
+        if (CacheType::LRU === $type) {
             return new LRUCache($capacity);
-        } else if (Type::MRU === $type) {
+        } else if (CacheType::MRU === $type) {
             return new MRUCache($capacity);
         }
 

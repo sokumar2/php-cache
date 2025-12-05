@@ -18,7 +18,7 @@
         }
     ],
     "require": {
-        "php": ">=8.1.0",
+        "php": ">=8.4.0",
         "sokumar2/collections": "^1.0"
     },
     "require-dev": {

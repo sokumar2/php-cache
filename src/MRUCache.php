@@ -7,7 +7,7 @@ class MRUCache extends AbstractCache
     public function put(string $key, mixed $value): void
     {
         if (isset($this->cache[$key])) {
-            $this->linkedList->removeByEntry($this->cache[$key]);
+            $this->linkedList->removeNode($this->cache[$key]);
 
             $this->size--;
         } elseif ($this->size === $this->capacity) {

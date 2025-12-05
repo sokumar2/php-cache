@@ -13,7 +13,7 @@ class LinkedList extends BaseLinkedList implements ListInterface
         return $this->first;
     }
 
-    public function removeByEntry(Entry $entry): void
+    public function removeNode(Entry $entry): void
     {
         $this->removeEntry($entry);
     }

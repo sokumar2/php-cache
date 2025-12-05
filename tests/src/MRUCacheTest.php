@@ -2,9 +2,9 @@
 
 namespace Tests\Cache;
 
-use SK\Cache\Type;
 use Tests\TestCase;
 use SK\Cache\CacheFactory;
+use SK\Cache\Type as CacheType;
 use SK\Cache\Interface\CacheInterface;
 use PHPUnit\Framework\Attributes\DataProvider;
 
@@ -13,7 +13,7 @@ class MRUCacheTest extends TestCase
     public static function objectProvider(): array
     {
         return [
-            [(new CacheFactory())->createInstance(3, Type::MRU)]
+            [new CacheFactory()->createInstance(3, CacheType::MRU)]
         ];
     }
 

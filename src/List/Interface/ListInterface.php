@@ -9,5 +9,5 @@ interface ListInterface extends BaseListInterface
 {
     public function getFirst(): Entry;
 
-    public function removeByEntry(Entry $entry): void;
+    public function removeNode(Entry $entry): void;
 }

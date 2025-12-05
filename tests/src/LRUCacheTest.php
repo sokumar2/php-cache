@@ -12,7 +12,7 @@ class LRUCacheTest extends TestCase
     public static function objectProvider(): array
     {
         return [
-            [(new CacheFactory())->createInstance(3)]
+            [new CacheFactory()->createInstance(3)]
         ];
     }
 
